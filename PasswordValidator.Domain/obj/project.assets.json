@@ -24,14 +24,13 @@
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/guilhermelyracampos/.config/NuGet/NuGet.Config"
+        "/Users/guilhermelyracampos/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/tooseguros/_packaging/TooSeguros/nuget/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {

@@ -53,4 +53,9 @@ dkms.conf
 
 ./obj/bin/Debug/net5.0
 
-/PasswordValidator.Api/obj/bin/Debug/net5.0
+/PasswordValidator.Api/obj/
+/PasswordValidator.Domain/obj/
+/PasswordValidator.Tests/obj/
+/PasswordValidator.Api/obj/bin/Debug/net5.0/
+/PasswordValidator.Domain/obj/bin/Debug/net5.0/
+/PasswordValidator.Testes/obj/bin/Debug/net5.0/

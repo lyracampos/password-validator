@@ -16,16 +16,19 @@ namespace PasswordValidator.Tests.IntegrationTests.Controllers
 {
     public class PasswordValidatorControllerTests
     {
-        private readonly WebApplicationFactory<Startup> factory = new WebApplicationFactory<Startup>();
+        private readonly HttpClient httpClient;
 
+        public PasswordValidatorControllerTests()
+        {
+            var factory = new WebApplicationFactory<Startup>(); ;
+            httpClient = factory.CreateClient();
+        }
         [Fact]
         public async Task ShouldReturnsTrue_WhenPassword_Isvalid()
         {
             // arrange
-            var password = new Password("AbTp9!fok");
-            var content = new StringContent(JsonConvert.SerializeObject(password), Encoding.UTF8, "application/json");
-            var client = factory.CreateClient();
-            var response = await client.PostAsync("/api/passwordvalidator", content);
+            var content = SetContent("AbTp9!fok");
+            var response = await httpClient.PostAsync("/api/passwordvalidator", content);
 
             // act
             var result = JsonConvert.DeserializeObject<PasswordResult>(await response.Content.ReadAsStringAsync());
@@ -35,15 +38,13 @@ namespace PasswordValidator.Tests.IntegrationTests.Controllers
             Assert.IsType<PasswordResult>(result);
             Assert.True(result.IsValid);
         }
-
+        
         [Fact]
         public async Task ShouldReturnsTrue_WhenPassword_Isinvalid()
         {
             // arrange
-            var password = new Password("123123");
-            var content = new StringContent(JsonConvert.SerializeObject(password), Encoding.UTF8, "application/json");
-            var client = factory.CreateClient();
-            var response = await client.PostAsync("/api/passwordvalidator", content);
+            var content = SetContent("123123123");
+            var response = await httpClient.PostAsync("/api/passwordvalidator", content);
 
             // act
             var result = JsonConvert.DeserializeObject<PasswordResult>(await response.Content.ReadAsStringAsync());
@@ -52,6 +53,12 @@ namespace PasswordValidator.Tests.IntegrationTests.Controllers
             // assert
             Assert.IsType<PasswordResult>(result);
             Assert.False(result.IsValid);
+        }
+
+        private StringContent SetContent(string password)
+        {
+            var request = new PasswordRequest(password);
+            return new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jRdpaUGYxQlT6J4eb6pJqpmqDBgb5X34CX34zT/bhtRGyvaU1g1f5x99mG+HZSRZ6UqxDe2/hOKwLCYU5BhevQ==",
+  "dgSpecHash": "u4sDT+k5WhOXt1+6+vuY7JD4Zgb10HefcgdxnJ54+n9WL9ZXAaywuVuroKXf70/b8io0T5jLIeDozUI06yW6Ag==",
   "success": true,
   "projectFilePath": "/Users/guilhermelyracampos/Documents/programacao/source/git/password-validator/PasswordValidator.Tests/PasswordValidator.Tests.csproj",
   "expectedPackageFiles": [
