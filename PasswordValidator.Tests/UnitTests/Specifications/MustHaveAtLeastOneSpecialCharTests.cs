@@ -1,5 +1,5 @@
 ﻿using Xunit;
-using PasswordValidator.Domain.Specifications;
+using PasswordValidator.Api.Specifications;
 
 namespace PasswordValidator.Tests.UnitTests.Specifications
 {

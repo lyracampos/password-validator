@@ -1,6 +1,6 @@
-﻿using PasswordValidator.Domain.Specifications;
+﻿using PasswordValidator.Api.Specifications;
 
-namespace PasswordValidator.Domain.Entities
+namespace PasswordValidator.Api.Models
 {
     public class Password
     {

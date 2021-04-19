@@ -1,4 +1,4 @@
-﻿using PasswordValidator.Domain.Specifications;
+﻿using PasswordValidator.Api.Specifications;
 using Xunit;
 
 namespace PasswordValidator.Tests.UnitTests.Specifications

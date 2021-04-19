@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace PasswordValidator.Domain.Specifications
+namespace PasswordValidator.Api.Specifications
 {
     public class CannotContainerRepeatedChar : ValidatePassword
     {

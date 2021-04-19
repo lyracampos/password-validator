@@ -13,8 +13,6 @@ using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("PasswordValidator.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "/Users/guilhermelyracampos/Documents/programacao/source/git/password-validator/Pa" +
     "sswordValidator.Api", "PasswordValidator.Api.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("PasswordValidator.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "/Users/guilhermelyracampos/Documents/programacao/source/git/password-validator/Pa" +
-    "sswordValidator.Domain", "PasswordValidator.Domain.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("PasswordValidator.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

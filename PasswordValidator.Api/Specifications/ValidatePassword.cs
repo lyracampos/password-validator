@@ -1,4 +1,4 @@
-﻿namespace PasswordValidator.Domain.Specifications
+﻿namespace PasswordValidator.Api.Specifications
 {
     public abstract class ValidatePassword
     {

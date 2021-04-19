@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,7 +24,17 @@ namespace PasswordValidator.Api
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "PasswordValidator.Api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "PasswordValidator.Api",
+                    Version = "v1",
+                    Description = "API para validar se a senha atende ao conjunto de regras específicas.",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Guilherme Lyra Campos",
+                        Url = new Uri("https://github.com/lyracampos/password-validator")
+                    }
+                });
             });
         }
 
@@ -34,7 +45,11 @@ namespace PasswordValidator.Api
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PasswordValidator.Api v1"));
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "PasswordValidator.Api v1");
+                    c.ShowExtensions();
+                });
             }
 
             app.UseHttpsRedirection();
