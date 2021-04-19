@@ -6,7 +6,7 @@ API desenvolvida para verificar se uma senha atende à um conjunto de regras esp
 ## pré requisitos
 .net 5.0
 
-### técnologias
+## técnologias
 <br />framework .net 5.0
 <br />language c# 8.0
 
@@ -36,3 +36,12 @@ cd PasswordValidator.Tests
 
 dotnet test
 ```
+
+
+## Solução abordada para o desafio
+Optei por abstrair o comportamento das validações em uma classe abstrata com métodos e propriedades para tal. As classes que herdam da classe abstrata ficam responsáveis por cada regra específica do conjunto de validações. Assim temos classes responsáveis por cada verificação e podemos compor elas de acordo com a necessidade.
+
+Os testes unitários foram feitos para cada regra e o teste integrado para a o endpoint da API.
+
+### Outra solução possível
+O mesmo problema poderia ser feito atraves de partial class. Fico à disposição para implantar.
